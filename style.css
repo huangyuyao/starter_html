@@ -1,0 +1,72 @@
+/* style.css */
+body {
+    background-color: #003366;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-size: 24px;  /* or any size you prefer */
+    font-family: 'Arial', sans-serif;  /* or any font family you prefer */
+    text-align: center;
+}
+
+h2, h3 {
+    font-size: 20px;  
+    font-family: 'Times New Roman', serif;  /* or any font family you prefer */
+    color: #009900;
+}
+
+p {
+    line-height: 1.6; 
+}
+
+img {
+    border: 5px solid #660066;
+    padding: 10px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+}
+
+li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 10px;
+    z-index: 100;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+
+  .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+  
+  .animation-element {
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .animation-element {
+      animation: none;
+    }
+  }
