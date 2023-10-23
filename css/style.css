@@ -24,6 +24,13 @@ h1 {
     text-align: center;
 }
 
+figcaption {
+  font-size: 0.95rem;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
 h2, h3 {
   font-size: 1.5rem;
   padding-left: 1rem;
@@ -54,6 +61,19 @@ img {
     border-top-right-radius: 30px;
 }
 
+main li {
+  margin: 0.5rem 0.5rem 0.5rem 2rem;
+}
+
+main ul {
+  list-style: disc;
+}
+
+main ol {
+  list-style: decimal;
+}
+
+
 li {
     display: inline-block;
     margin-left: 50px;
@@ -68,6 +88,11 @@ li {
     padding: 10px;
     z-index: 100;
   }
+
+  .skip {
+    position: absolute;
+    top: -100vh;
+}
   
   .skip:focus {
     position: static;
@@ -76,9 +101,46 @@ li {
     text-align: center;
     font-size: 1.5rem;
     border: 0.2rem solid #000;
-    border-radius: 1rem;
+    border-radiuxs: 1rem;
     margin: 0.2rem;
     padding: 0.25rem;
+}
+
+nav ul {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: var(--primary);
+  width: 100%;
+  line-height: 2.25rem;
+}
+
+nav a {
+  font-size: 1.65rem;
+  padding: 0.2rem 0.4rem;
+  color: var(--background);
+}
+
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li.current a {
+  text-decoration: underline; /* Add an underline to the active link text */
+  background-color: #f0f0f0; /* Change the background color for better visibility */
+  font-weight: bold; /* Optionally, make the text bold */
+}
+
+a.active {
+  border: 0.1rem solid var(--accent);
+  border-radius: 1rem;
+  background-color: var(--background);
+  color: var(--text)
 }
 
   .nav-link.active {
@@ -90,6 +152,7 @@ li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
 
   @keyframes slideIn {
     from { transform: translateX(-100%); }
